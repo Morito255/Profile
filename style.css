@@ -1,0 +1,178 @@
+/* Video de fondo */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Intro inicial */
+#intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    position: relative;
+    font-family: monospace;
+}
+
+/* Contenedor principal oculto al principio */
+#main {
+    display: none; /* Oculto hasta presionar Y */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenido del perfil */
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.location {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+.socials a {
+    margin: 0 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #1db954; /* Spotify green hover */
+}
+
+/* Tarjeta de estado de Discord */
+.status-card {
+    margin-top: 2rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: 16px;
+    display: inline-block;
+    color: white;
+    font-family: sans-serif;
+  }
+  /* Barra de progreso de Spotify similar al formato de la imagen */
+#spotify-progress-container {
+  margin-top: 10px;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#spotify-progress {
+  height: 100%;
+  background: #1db954; /* Color de Spotify */
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+#spotify-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+#spotify-status img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+/* Avatar con efecto hover */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Enlaces sociales con efecto hover mejorado */
+  .socials a {
+    margin: 0 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .socials a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #1db954;
+    transition: width 0.3s ease;
+  }
+  
+  .socials a:hover {
+    color: #1db954;
+    transform: translateY(-2px);
+  }
+  
+  .socials a:hover::after {
+    width: 100%;
+  }
+  /* Mantener tamaño original del texto, con resplandor sutil */
+#main h2 {
+    position: relative;
+    font-size: 2rem; /* Tamaño original que tenías antes, ajusta si es necesario */
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8), 0px 0px 4px rgba(255, 255, 255, 0.6);
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+/* Animación de resplandor pequeño */
+@keyframes glowing {
+    0% {
+        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8), 0px 0px 4px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0px 0px 4px rgba(255, 255, 255, 1), 0px 0px 6px rgba(255, 255, 255, 0.8);
+    }
+}
